@@ -1,0 +1,51 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Calculations App (5001)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "task.agents.calculations.calculations_app",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+    },
+    {
+      "name": "Content Management App (5002)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "task.agents.content_management.content_management_app",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+    },
+    {
+      "name": "Web Search App (5003)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "task.agents.web_search.web_search_app",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Run 2 Apps: Calculations + Web Search",
+      "configurations": [
+        "Calculations App (5001)",
+        "Web Search App (5003)"
+      ],
+      "stopAll": true
+    },
+    {
+      "name": "Run 3 Apps: Calculations + Content + Web",
+      "configurations": [
+        "Calculations App (5001)",
+        "Content Management App (5002)",
+        "Web Search App (5003)"
+      ],
+      "stopAll": true
+    }
+  ]
+}
