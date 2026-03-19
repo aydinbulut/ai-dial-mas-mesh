@@ -8,7 +8,7 @@
       "module": "task.agents.calculations.calculations_app",
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
-      "justMyCode": false,
+      "justMyCode": true,
     },
     {
       "name": "Content Management App (5002)",
@@ -17,7 +17,7 @@
       "module": "task.agents.content_management.content_management_app",
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
-      "justMyCode": false,
+      "justMyCode": true,
     },
     {
       "name": "Web Search App (5003)",
@@ -26,7 +26,7 @@
       "module": "task.agents.web_search.web_search_app",
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
-      "justMyCode": false,
+      "justMyCode": true,
     }
   ],
   "compounds": [

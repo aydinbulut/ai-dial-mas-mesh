@@ -67,15 +67,18 @@ services:
       DIAL_URL: "http://core:8080"
       LOG_LEVEL: "INFO"
 
-  python-interpreter-mcp-server:
-    image: khshanovskyi/python-code-interpreter-mcp-server:latest
+  python-interpreter:
+    build:
+      context: .
+      dockerfile: Dockerfile.python-interpreter
+    image: python-interpreter-mcp-custom:latest
     ports:
       - "8050:8000"
     environment:
       LOG_LEVEL: "INFO"
     restart: unless-stopped
-    mem_limit: 2G
-    cpus: 2.0
+    mem_limit: 4G
+    cpus: 4.0
 
   ddg-search-mcp-server:
     image: khshanovskyi/ddg-mcp-server:latest

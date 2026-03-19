@@ -7,8 +7,8 @@ from task.agents.content_management.tools.files.file_content_extraction_tool imp
 from task.agents.content_management.tools.rag.document_cache import DocumentCache
 from task.agents.content_management.tools.rag.rag_tool import RagTool
 from task.tools.base_tool import BaseTool
-# from task.tools.deployment.calculations_agent_tool import CalculationsAgentTool
-# from task.tools.deployment.web_search_agent_tool import WebSearchAgentTool
+from task.tools.deployment.calculations_agent_tool import CalculationsAgentTool
+from task.tools.deployment.web_search_agent_tool import WebSearchAgentTool
 from task.utils.constants import DIAL_ENDPOINT, DEPLOYMENT_NAME
 
 #TODO:
@@ -32,8 +32,8 @@ class ContentManagementApplication(ChatCompletion):
                 deployment_name=DEPLOYMENT_NAME,
                 document_cache=DocumentCache()
                 ),
-            # CalculationsAgentTool(DIAL_ENDPOINT),
-            # WebSearchAgentTool(DIAL_ENDPOINT)
+            CalculationsAgentTool(DIAL_ENDPOINT),
+            WebSearchAgentTool(DIAL_ENDPOINT)
         ]
         return tools
 # 3. Override the chat_completion method of ChatCompletion, create Choice and call ContentManagementAgent

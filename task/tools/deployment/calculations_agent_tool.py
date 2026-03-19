@@ -8,9 +8,7 @@ class CalculationsAgentTool(BaseAgentTool):
     #TODO:
     # Provide implementations of deployment_name (in core config), name, description and parameters.
     # Don't forget to mark them as @property
-    # Parameters:
-    #   - prompt: string. Required.
-    #   - propagate_history: boolean
+    
     @property
     def deployment_name(self) -> str:
         return "calculations-agent"
@@ -23,6 +21,9 @@ class CalculationsAgentTool(BaseAgentTool):
     def description(self) -> str:
         return "Tool to call Calculations Agent, that can perform complex calculations, code execution, content management and web search in one call. It is powerful tool that can be used in different scenarios, for example, when you need to perform complex calculation with multiple steps, or when you need to perform calculation and then save result to content management system and then share it with other agents, or when you need to perform calculation and then find some information in web and then use this information in calculation."
     
+    # Parameters:
+    #   - prompt: string. Required.
+    #   - propagate_history: boolean
     @property
     def parameters(self) -> dict[str, Any]:
         return {
